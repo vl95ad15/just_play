@@ -1,0 +1,11 @@
+main {
+  margin: auto;
+  width: 90%;
+  height: 83vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  font-size: xx-large;
+}

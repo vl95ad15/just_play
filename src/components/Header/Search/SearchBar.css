@@ -1,0 +1,27 @@
+.Search_Block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.Search_Block > input[type=text] {
+  padding: 7px;
+  width: 300px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 15px;
+}
+
+.Search_Block > button {
+  padding: 7px;
+  width: 50px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.Search_Block > button:hover {
+  background-color: #9cf9ff;
+  transition-duration: 0.5s;
+}

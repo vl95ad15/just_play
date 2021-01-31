@@ -11,10 +11,12 @@ nav > ul > li {
 
 nav > ul > li > a {
   text-decoration: none;
+  white-space: nowrap;
   font-size: large;
-  color: #9cf9ff;
+  color: azure;
 }
 
 nav > ul > li > a:hover {
-  color: azure;
+  color:#9cf9ff;
+  transition-duration: 0.3s;
 }

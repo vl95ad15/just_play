@@ -1,9 +1,11 @@
+import Tracks from '../Tracks/Tracks';
+
 import './Page.css';
 
 function Home() {
   return(
     <main>
-      <p>Home Page</p>
+      <Tracks />
     </main>
   )
 }

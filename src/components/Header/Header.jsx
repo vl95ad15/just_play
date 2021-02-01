@@ -1,7 +1,6 @@
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
 import MenuItem from './Menu/MenuItem';
-// import Nav from './Nav/Nav';
 import SearchBar from './Search/SearchBar';
 import Login from './LoginMenu/Login';
 

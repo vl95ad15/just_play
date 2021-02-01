@@ -1,5 +1,7 @@
 import Logo from './Logo/Logo';
-import Nav from './Nav/Nav';
+import Menu from './Menu/Menu';
+import MenuItem from './Menu/MenuItem';
+// import Nav from './Nav/Nav';
 import SearchBar from './Search/SearchBar';
 import Login from './LoginMenu/Login';
 
@@ -9,7 +11,10 @@ function Header() {
   return(
     <header>
       <Logo />
-      <Nav />
+      <Menu>
+        <MenuItem title={"Home"} pathTo={"/"} />
+        <MenuItem title={"My Library"} pathTo={"/library"} />
+      </Menu>
       <SearchBar />
       <Login />
     </header>

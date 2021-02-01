@@ -9,14 +9,16 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/library" component={Library} />
         </Switch>
+
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

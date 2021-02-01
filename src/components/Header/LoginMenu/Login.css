@@ -1,4 +1,4 @@
-.Login_Bar > button {
+.LoginBar > button {
   padding: 7px;
   margin: 0 10px;
   border-radius: 5px;
@@ -7,16 +7,16 @@
   font-size: 15px;
 }
 
-.Login_Bar > .Create_acc_btn {
+.LoginBar > .CreateAccBtn {
   background-color: #9cf9ff;
 }
 
-.Create_acc_btn:hover {
+.CreateAccBtn:hover {
   background-color: white;
   transition-duration: 0.5s;
 }
 
-.Sign_in_btn:hover {
+.SignInBtn:hover {
   background-color: #9cf9ff;
   transition-duration: 0.5s;
 }

@@ -8,3 +8,9 @@ header {
   height: 7vh;
   background-color:#25252b;
 }
+
+/* @media screen and (max-width: 1000px) {
+  header {
+    flex-direction: column;
+  }
+} */

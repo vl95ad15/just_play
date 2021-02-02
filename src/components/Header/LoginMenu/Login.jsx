@@ -7,10 +7,10 @@ const Login = () => {
 
   return (
     <div className="LoginBar">
-      <button className="SignInBtn" onClick={() => setModalActive(true)}>
-        Sign in
+      <button className="SignUpBtn" onClick={() => setModalActive(true)}>
+        Sign up
       </button>
-      <button className="CreateAccBtn">Create account</button>
+      <button className="LogInBtn">Log in</button>
       <LoginModal active={modalActive} setActive={setModalActive} />
     </div>
   );

@@ -7,16 +7,16 @@
   font-size: 15px;
 }
 
-.LoginBar > .CreateAccBtn {
-  background-color: #9cf9ff;
+.LoginBar > .LogInBtn {
+  background-color: #00f8e0;
 }
 
-.CreateAccBtn:hover {
+.LogInBtn:hover {
   background-color: white;
   transition-duration: 0.5s;
 }
 
-.SignInBtn:hover {
-  background-color: #9cf9ff;
+.SignUpBtn:hover {
+  background-color: #00f8e0;
   transition-duration: 0.5s;
 }

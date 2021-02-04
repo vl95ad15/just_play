@@ -1,4 +1,5 @@
-.LoginBar > button {
+.LoginBar > .LogInBtn {
+  background-color: #00f8e0;
   padding: 7px;
   margin: 0 10px;
   border-radius: 5px;
@@ -7,16 +8,7 @@
   font-size: 15px;
 }
 
-.LoginBar > .LogInBtn {
-  background-color: #00f8e0;
-}
-
 .LogInBtn:hover {
   background-color: white;
-  transition-duration: 0.5s;
-}
-
-.SignUpBtn:hover {
-  background-color: #00f8e0;
   transition-duration: 0.5s;
 }

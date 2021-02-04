@@ -1,0 +1,57 @@
+.Modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  z-index: 1;
+}
+
+.Modal.Active {
+  transform: scale(1);
+}
+
+.ModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.ModalContent > input {
+  padding: 7px;
+  margin: 7px 5px;
+  width: 300px;
+}
+
+.ModalContent > button {
+  padding: 7px;
+  margin: 7px;
+  width: 300px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.ModalContent > button:hover {
+  background-color: #57f4ff;
+  transition-duration: 0.5s;
+}
+
+.ModalCloseBtn {
+  cursor: pointer;
+  float: right;
+}
+
+.ModalCloseBtn:hover {
+  color: aqua;
+}

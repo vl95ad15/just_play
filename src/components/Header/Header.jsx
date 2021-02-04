@@ -2,7 +2,7 @@ import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
 import MenuItem from './Menu/MenuItem';
 import SearchBar from './Search/SearchBar';
-import Login from './LoginMenu/Login';
+import LoginBar from './LoginMenu/LoginBar';
 
 import './Header.css';
 
@@ -15,7 +15,7 @@ function Header() {
         <MenuItem title={"My Library"} pathTo={"/library"} />
       </Menu>
       <SearchBar />
-      <Login />
+      <LoginBar />
     </header>
   )
 }

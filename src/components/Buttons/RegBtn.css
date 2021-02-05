@@ -33,3 +33,18 @@
   -o-transition: all 0.3s ease;;
   transition: all 0.3s ease;
 }
+
+.LogInBtn {
+  background-color: #00f8e0;
+  padding: 7px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.LogInBtn:hover {
+  background-color: white;
+  transition-duration: 0.5s;
+}

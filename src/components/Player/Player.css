@@ -1,0 +1,10 @@
+.Player, .PlayerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.Player {
+  padding: 10px;
+}

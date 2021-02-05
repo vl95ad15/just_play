@@ -1,0 +1,28 @@
+.SongListItem {
+  display: flex;
+  width: 250px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.SongImage {
+  width: 40%;
+}
+
+.SongImage > img{
+  width: 100%;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.SongName {
+  padding-bottom: 5px;
+}
+
+.SongName > span {
+  font-weight: bolder;
+}
+

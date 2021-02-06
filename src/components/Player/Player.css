@@ -1,8 +1,23 @@
-.Player, .PlayerButtons {
+.Player {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
+}
+
+.PlayerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.PlayerButtons > div {
+  cursor: pointer;
+}
+
+.PlayerButtons > div:hover {
+  color: #00f8e0;
+  transition-duration: 0.5s;
 }
 
 .Player {

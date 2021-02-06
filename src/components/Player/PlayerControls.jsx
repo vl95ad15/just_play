@@ -16,9 +16,9 @@ function PlayerControls(props) {
             onClick={() => props.setIsPlaying(!props.isPlaying)}
           >
             {props.isPlaying ? (
-              <i className="fa fa-pause-circle fa-2x" />
+              <i className="fa fa-pause-circle fa-3x" />
             ) : (
-              <i className="fa fa-play-circle fa-2x" />
+              <i className="fa fa-play-circle fa-3x" />
             )}
           </div>
           <div className="SkipBtn" onClick={() => props.SkipSong()}>
@@ -36,20 +36,12 @@ function PlayerControls(props) {
             max="100"
             defaultValue="0"
             className="SeekSlider"
+            onChange={(e) =>
+              props.setPosition(e.currentTime * (100 / e.duration))
+            }
           />
           <div className="TotalDuration">00:00</div>
         </div>
-      </div>
-      <div className="VolumeSliderContainer">
-        <i className="fa fa-volume-down" />
-        <input
-          type="range"
-          min="0"
-          max="100"
-          defaultValue="50"
-          className="VolumeSlider"
-        />
-        <i className="fa fa-volume-up" />
       </div>
     </div>
   );

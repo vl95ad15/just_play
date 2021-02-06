@@ -12,7 +12,8 @@ const Modal = ({ active, setActive }) => {
           <i className="fa fa-times"></i>
         </div>
         <div className="ModalContent" onClick={(e) => e.stopPropagation()}>
-          <RegForm />
+          <RegForm case="SignUp"/>
+          <RegForm case="LogIn"/>
         </div>
       </div>
     </div>

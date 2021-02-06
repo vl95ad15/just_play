@@ -1,12 +1,11 @@
-import SignUpBtn from '../../Buttons/SignUpBtn';
+import RegBtn from "../../Buttons/RegBtn";
 import "./LoginBar.css";
 
 const LoginBar = () => {
-
   return (
     <div className="LoginBar">
-      <SignUpBtn buttonText="Sign up" className="SignUpBtn"/>
-      <button className="LogInBtn">Log in</button>
+      <RegBtn buttonText="Sign up" className="SignUpBtn" />
+      <RegBtn buttonText="Log in" className="LogInBtn" />
     </div>
   );
 };

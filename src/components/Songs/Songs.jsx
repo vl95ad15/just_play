@@ -1,9 +1,9 @@
 import SongList from './SongList';
-import { songsDB } from './songsDB';
+import { songsDB } from "../../context/songsDB";
 
 function Songs() {
   return(
-    <SongList song={songsDB}/>
+    <SongList song={songsDB} />
   )
 }
 

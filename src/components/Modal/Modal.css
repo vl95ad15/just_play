@@ -8,43 +8,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
   z-index: 1;
 }
 
 .Modal.Active {
-  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
 }
 
 .ModalContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px;
   border-radius: 12px;
   background-color: white;
+  transform: scale(0.5);
+  transition: 0.4s all;
 }
 
-.ModalContent > input {
-  padding: 7px;
-  margin: 7px 5px;
-  width: 300px;
-}
+.ModalContent.Active {
+  transform: scale(1);
 
-.ModalContent > button {
-  padding: 7px;
-  margin: 7px;
-  width: 300px;
-  background-color: rgb(211, 211, 211);
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.ModalContent > button:hover {
-  background-color: #57f4ff;
-  transition-duration: 0.5s;
 }
 
 .ModalCloseBtn {

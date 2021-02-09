@@ -1,15 +1,13 @@
-import AppPlayer from '../Player/AppPlayer';
-// import SignUpMessage from './SignUpMessage';
-/*import AudioPlayer from '../PlayerContext/PlayerContext';*/
+// import Player from '../Player/Player';
+import SignUpMessage from "./SignUpMessage"
 
 import './Footer.css';
 
 function Footer() {
   return(
     <footer>
-       <AppPlayer />
-      {/* <SignUpMessage /> */}
-{/*      <AudioPlayer />*/}
+      {/* <Player /> */}
+      <SignUpMessage />
     </footer>
   )
 }

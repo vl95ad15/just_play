@@ -1,7 +1,7 @@
 import "./Menu.css";
 
 function Menu(props) {
-  return <div>
+  return <div className="Menu">
     {props.children}
   </div>
 }

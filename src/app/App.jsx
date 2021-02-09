@@ -1,14 +1,16 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Home from "../components/Pages/Home";
-import Library from "../components/Pages/Library";
+import Home from "../pages/Home";
+import Library from "../pages/Library";
+import State from '../context/state';
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <State>
+      <div className="App">
       <Router>
         <Header />
 
@@ -20,6 +22,7 @@ function App() {
         <Footer />
       </Router>
     </div>
+    </State>
   );
 }
 

@@ -2,7 +2,7 @@ import {
   SET_CURRENT_SONG,
   TOGGLE_RANDOM,
   TOGGLE_REPEAT,
-  TOGGLE_PLAYING
+  TOGGLE_PLAYING,
 } from './types';
 
 export default function Reducer(state, action) {

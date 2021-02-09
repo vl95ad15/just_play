@@ -46,7 +46,7 @@ export const songsDB = [
     title: "Midnight Stroll",
     artist: "Ghostrifter Official",
     image: "https://www.free-stock-music.com/thumbnails/ghostrifter-official-midnight-stroll.jpg",
-    path: "https://www.free-stock-music.com/music/ghostrifter-official-midni'gh't-stroll.mp3",
+    path: "https://www.free-stock-music.com/music/ghostrifter-official-midnight-stroll.mp3",
   },
   {
     id: 8,

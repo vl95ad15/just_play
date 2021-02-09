@@ -7,16 +7,24 @@ import {
   SET_CURRENT_SONG,
   TOGGLE_RANDOM,
   TOGGLE_REPEAT,
-  TOGGLE_PLAYING
+  TOGGLE_PLAYING,
 } from './types';
 
 function State(props) {
   const initialState = {
+    isAuth: false,
+    userName: null,
+    password: null,
+    email: null,
     currentSong: 0,
+    playing: false,
+    // playlists: {
+    //   home: songsDB,
+    //   favorites: []
+    // },
     songs: songsDB,
     repeat: false,
     random: false,
-    playing: false,
     audio: null
   }
 
@@ -45,8 +53,8 @@ function State(props) {
   }
 
   // Repeat and Random
-  const toggleRepeat = (id) => dispatch({ type: TOGGLE_REPEAT, data: state.repeat ? false : true })
-  const toggleRandom = (id) => dispatch({ type: TOGGLE_RANDOM, data: state.random ? false : true })
+  const toggleRepeat = id => dispatch({ type: TOGGLE_REPEAT, data: state.repeat ? false : true })
+  const toggleRandom = id => dispatch({ type: TOGGLE_RANDOM, data: state.random ? false : true })
 
 
   // End of Song

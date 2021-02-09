@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
-import SignupForm from "../Header/LoginMenu/SignupForm";
-// import LoginForm from "../Header/LoginMenu/LoginForm";
 
 import "./RegBtn.css";
 
@@ -14,7 +12,7 @@ function RegBtn(props) {
         {props.buttonText}
       </button>
       <Modal active={modalActive} setActive={setModalActive}>
-        <SignupForm />
+        {props.form}
       </Modal>
     </>
   );

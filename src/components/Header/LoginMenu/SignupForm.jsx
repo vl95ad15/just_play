@@ -1,4 +1,6 @@
 import React from "react";
+import { v4 } from "uuid";
+import { client } from "../../../client";
 import "./Form.css";
 
 class SignupForm extends React.Component {
@@ -6,6 +8,7 @@ class SignupForm extends React.Component {
     userName: "",
     email: "",
     password: "",
+    library: []
   };
   setUserName = (e) => {
     this.setState({
@@ -25,45 +28,20 @@ class SignupForm extends React.Component {
     });
   };
 
-  viewState = (e) => {
+  onSubmit = async (e) => {
     e.preventDefault();
-    const user = {
-      [this.state.userName]: {
-        library: [],
-        myProfile: [
-          {
-            userName: this.state.userName,
-          },
-        ],
-        password: this.state.password,
-      },
+    
+    const newUser = {
+      id: v4(),
+      ...this.state,
     };
-    this.pushToDatabase(user);
-  };
-
-  pushToDatabase = async (value) => {
-    const options = {
-      method: "PUT",
-      body: JSON.stringify(value),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    };
-    await fetch(`http://localhost:8000/${this.state.userName}/`, {
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
-      body: JSON.stringify(value),
-    });
-    await fetch(
-      `http://localhost:8000/${this.state.userName}/`,
-      options
-    ).then((res) => res.json());
+    
+    await client.signUp(newUser);
   };
 
   render() {
     return (
-      <form onSubmit={this.viewState}>
+      <form onSubmit={this.onSubmit}>
         <h2>Sign up</h2>
         <input name="userName" type="text" placeholder="Enter your nickname..." onChange={this.setUserName} required />
         <input name="email" type="email" placeholder="Enter your email..." onChange={this.setEmail} required />

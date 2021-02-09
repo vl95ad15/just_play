@@ -1,8 +1,18 @@
 {
-  "users": {
-    "id": 1,
-    "userName": "test",
-    "email": "test@mail.ru",
-    "library": []
-  }
+  "users": [
+    {
+      "id": "3517e4e8-9c5c-4bf4-b654-a387f54d9016",
+      "userName": "123",
+      "email": "123@gmail.com",
+      "password": "123",
+      "library": []
+    },
+    {
+      "id": "7c78f14f-54e2-4c3c-89f8-dcb8ba08d021",
+      "userName": "123",
+      "email": "123@gmail.com",
+      "password": "123",
+      "library": []
+    }
+  ]
 }

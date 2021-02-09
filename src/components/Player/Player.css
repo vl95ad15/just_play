@@ -4,6 +4,7 @@
   justify-content: space-between;
   color: white;
   padding: 6px;
+  margin: 0 10px;
 }
 
 .ControlsWrapper {
@@ -17,26 +18,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .PlayerButtons > div {
-  margin: 0 10px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.PlayerButtons > div:hover {
+  color:#00f8e0;
+  transition-duration: 0.3s;
 }
 
 .ProgressBar {
-  width: 350px;
+  width: 550px;
 }
 
 .ProgressBarWrapper {
-
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+.ProgressBarWrapper > div {
+  margin: 0 7px;
+}
+
 .PlayerDetails {
   display: flex;
-  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .DetailsInfo {
@@ -54,4 +66,19 @@
 
 .DetailsTitle {
   font-size: larger;
+  font-weight: bolder;
+}
+
+.VolumeSlider {
+  display: flex;
+  justify-content: center;
+}
+
+.LikeButton {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+input[type=range] {
+  cursor: pointer;
 }

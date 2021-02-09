@@ -18,11 +18,15 @@
   border-radius: 10px;
 }
 
-.SongName {
+.SongTitle {
   padding-bottom: 5px;
 }
 
-.SongName > span {
+.SongTitle > span {
   font-weight: bolder;
+}
+
+.SongArtist > span {
+  font-size: small;
 }
 

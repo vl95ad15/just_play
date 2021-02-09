@@ -3,3 +3,34 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.SongListItem {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.SongTitle > span {
+  font-weight: bolder;
+}
+
+.SongArtist > span {
+  font-size: medium;
+}
+
+.SongImage > img {
+  width: 100%;
+}
+
+.SongImage > div {
+  cursor: pointer;
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgba(255, 255, 255, 0.226);
+}
+
+.SongImage > div:hover {
+  color: rgb(255, 255, 255);
+  transition-duration: 0.5s;
+}

@@ -1,29 +1,37 @@
-import React, { useContext } from 'react';
-import { Context } from '../../context/context';
-// import SongListItem from './SongListItem';
-import './SongList.css';
-
+import React, { useContext } from "react";
+import { Context } from "../../context/context";
+import "./SongList.css";
 
 function SongList({ song }) {
-  
-  const { SetCurrent, playing } = useContext(Context) 
-  return(
+  const { SetCurrent, playing } = useContext(Context);
+  return (
     <div className="SongList">
-      {song.map((song, index) => <div song={song} key={index.toString()} >
-        <div className="SongListItem"  >
-      <div className="SongImage"><img src={song.image} alt="img" /></div>
-      <div className="SongDetails">
-      <div className="SongName"><span>{song.title}</span></div>
-      <div className="SongArtist"><span>{song.artist}</span></div>
-      </div>
-      <button onClick={() => { SetCurrent(index); }}><span className={!playing ? '' : 'hide'}><i className="fas fa-play"></i></span>
-          <span className={!playing ? 'hide' : ''}><i className="fas fa-pause"></i></span></button>
-      </div>
-      </div>)}
+      {song.map((song, index) => (
+        <div song={song.id} key={index.toString()}>
+          <div className="SongListItem">
+            <div className="SongImage">
+              <img src={song.image} alt="img" />
+              <div
+                onClick={() => {
+                  SetCurrent(index);
+                }}
+              >
+                <i className={`fa fa-${playing ? "pause" : "play"} fa-4x`} />
+              </div>
+            </div>
+            <div className="SongDetails">
+              <div className="SongTitle">
+                <span>{song.title}</span>
+              </div>
+              <div className="SongArtist">
+                <span>{song.artist}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
 export default SongList;
-
-// song={song} key={index.toString()}

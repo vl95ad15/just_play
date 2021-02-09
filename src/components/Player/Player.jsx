@@ -28,7 +28,7 @@ function Player() {
   const [currentTime, setCurrentTime] = useState(0);
 
   const fmtMSS = (s) => {
-    return (s - (s %= 60)) / 60 + (9 < s ? ":" : ":0") + ~~s;
+    return (s - (s %= 60)) / 60 + (10 < s ? ":" : ":0") + ~~s;
   };
 
   const toggleAudio = () =>
@@ -64,12 +64,15 @@ function Player() {
         src={songs[currentSong].path}
       />
       <div className="PlayerDetails">
-      <div className="DetailsImg">
-        <img src={songs[currentSong].image} alt="img" />
+        <div className="DetailsImg">
+          <img src={songs[currentSong].image} alt="img" />
         </div>
         <div className="DetailsInfo">
-        <span className="DetailsTitle">{songs[currentSong].title}</span>
-        <span className="DetailsArtist">{songs[currentSong].artist}</span>
+          <span className="DetailsTitle">{songs[currentSong].title}</span>
+          <span className="DetailsArtist">{songs[currentSong].artist}</span>
+        </div>
+        <div className="LikeButton">
+          <i className="fa fa-heart-o" aria-hidden="true" />
         </div>
       </div>
       <div className="ControlsWrapper">
@@ -89,7 +92,7 @@ function Player() {
               togglePlaying();
               toggleAudio();
             }}
-          ><i className="fas fa-play fa-2x" />
+          ><i className={`fa fa-${playing ? 'pause' : 'play'} fa-2x`} />
           </div>
           <div className="NextSongButton" onClick={nextSong}>
             <i className="fas fa-step-forward"></i>

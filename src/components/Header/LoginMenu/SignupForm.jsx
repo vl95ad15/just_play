@@ -1,9 +1,7 @@
 import React from "react";
 import "./Form.css";
+import { client } from "../../../client";
 import { v4 } from "uuid";
-import axios from "axios";
-
-const usersRoute = "http://localhost:3004/users";
 
 class SignupForm extends React.Component {
   state = {
@@ -37,7 +35,7 @@ class SignupForm extends React.Component {
       ...this.state,
     };
 
-    await axios.post(usersRoute, { ...newUser });
+    await client.signUp(newUser);
   };
 
   render() {

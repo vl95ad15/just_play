@@ -1,5 +1,9 @@
 import React from "react";
 import "./Form.css";
+import { v4 } from "uuid";
+import axios from "axios";
+
+const usersRoute = "http://localhost:3004/users";
 
 class SignupForm extends React.Component {
   state = {
@@ -25,49 +29,42 @@ class SignupForm extends React.Component {
     });
   };
 
-  viewState = (e) => {
+  onSubmit = async (e) => {
     e.preventDefault();
-    const user = {
-      [this.state.userName]: {
-        library: [],
-        myProfile: [
-          {
-            userName: this.state.userName,
-          },
-        ],
-        password: this.state.password,
-      },
-    };
-    this.pushToDatabase(user);
-  };
 
-  pushToDatabase = async (value) => {
-    const options = {
-      method: "PUT",
-      body: JSON.stringify(value),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
+    const newUser = {
+      id: v4(),
+      ...this.state,
     };
-    await fetch(`http://localhost:8000/${this.state.userName}/`, {
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
-      body: JSON.stringify(value),
-    });
-    await fetch(
-      `http://localhost:8000/${this.state.userName}/`,
-      options
-    ).then((res) => res.json());
+
+    await axios.post(usersRoute, { ...newUser });
   };
 
   render() {
     return (
-      <form onSubmit={this.viewState}>
+      <form onSubmit={this.onSubmit}>
         <h2>Sign up</h2>
-        <input name="userName" type="text" placeholder="Enter your nickname..." onChange={this.setUserName} required />
-        <input name="email" type="email" placeholder="Enter your email..." onChange={this.setEmail} required />
-        <input name="password" type="password" placeholder="Enter your password..." onChange={this.setPassword} required />
+        <input
+          name="userName"
+          type="text"
+          placeholder="Enter your nickname..."
+          onChange={this.setUserName}
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter your email..."
+          onChange={this.setEmail}
+          required
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Enter your password..."
+          onChange={this.setPassword}
+          required
+        />
         <button type="submit">Sign up</button>
       </form>
     );

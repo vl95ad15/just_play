@@ -1,5 +1,5 @@
 // import Player from '../Player/Player';
-import SignUpMessage from "./SignUpMessage"
+import SignUpMessage from "./SIgnUpMessage"
 
 import './Footer.css';
 

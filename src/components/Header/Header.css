@@ -7,9 +7,3 @@ header {
   padding: 0 10px;
   background-color:#25252b;
 }
-
-/* @media screen and (max-width: 1000px) {
-  header {
-    flex-direction: column;
-  }
-} */

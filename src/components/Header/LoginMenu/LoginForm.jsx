@@ -12,7 +12,9 @@ function LoginForm() {
     e.preventDefault();
     const isValidPassword = await client.checkPassword(email, password);
     if (isValidPassword === true) {
-      setIsLogged();
+      const userName = await client.getUsernamByEmail(email);
+      const library = await client.getLibraryByUsername(userName);
+      setIsLogged(userName, library);
     } else {
       alert("INCORRECT DATA");
     }

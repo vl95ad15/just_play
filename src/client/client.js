@@ -14,4 +14,16 @@ export const client = {
     const user = data.find((us) => us);
     return user?.password === password;
   },
+  getUsernamByEmail: async (email) => {
+    const params = { email };
+    const { data } = await axiosInstance.get("users", { params });
+    const user = data.find((us) => us);
+    return user?.userName;
+  },
+  getLibraryByUsername: async (userName) => {
+    const params = { userName };
+    const { data } = await axiosInstance.get("users", { params });
+    const user = data.find((us) => us);
+    return user?.library ?? [];
+  },
 };

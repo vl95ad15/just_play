@@ -13,6 +13,13 @@
       "email": "123@gmail.com",
       "password": "123",
       "library": []
+    },
+    {
+      "id": "28c301d8-16c0-4453-8604-e05a18ef8507",
+      "userName": "Vlad",
+      "email": "martsul.vlad@gmail.com",
+      "password": "123",
+      "library": []
     }
   ]
 }

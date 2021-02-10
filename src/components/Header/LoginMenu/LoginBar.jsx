@@ -6,7 +6,7 @@ import LoginForm from "../LoginMenu/LoginForm";
 import "./LoginBar.css";
 
 const LoginBar = (props) => {
-  const {isLogged, logOut, userName} = useContext(Context);
+  const {isLogged, logOut, userName } = useContext(Context);
 
   if (isLogged === false) {
     return (
@@ -22,7 +22,7 @@ const LoginBar = (props) => {
   } else {
     return (
       <div className="LogoutBar">
-        <p>{userName}</p>
+        <p style={{ color: "white" }}>{userName}</p>
         <button className="LogOutBtn" onClick={logOut}>Log out</button>
       </div>
     )

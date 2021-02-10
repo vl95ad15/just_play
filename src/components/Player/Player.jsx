@@ -23,7 +23,7 @@ function Player() {
   const audio = useRef("audio_tag");
 
   // self State
-  const [statevolum, setStateVolum] = useState(0.3);
+  const [statevolume, setStateVolum] = useState(0.3);
   const [dur, setDur] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
 
@@ -46,7 +46,7 @@ function Player() {
   };
 
   useEffect(() => {
-    audio.current.volume = statevolum;
+    audio.current.volume = statevolume;
     if (playing) {
       toggleAudio();
     }
@@ -119,7 +119,7 @@ function Player() {
       <div className="VolumeSlider">
           <i className="fas fa-volume-down"></i>
         <input
-          value={Math.round(statevolum * 100)}
+          value={Math.round(statevolume * 100)}
           type="range"
           name="volBar"
           id="volBar"

@@ -3,7 +3,8 @@ import { Context } from "../../context/context";
 import "./SongList.css";
 
 function SongList({ song }) {
-  const { SetCurrent, playing } = useContext(Context);
+  const context = useContext(Context)
+  const { SetCurrent } = context;
   return (
     <div className="SongList">
       {song.map((song, index) => (
@@ -16,7 +17,7 @@ function SongList({ song }) {
                   SetCurrent(index);
                 }}
               >
-                <i className={`fa fa-${playing ? "pause" : "play"} fa-4x`} />
+                <i className={`fa fa-${song.playing ? "pause" : "play"} fa-4x`} />
               </div>
             </div>
             <div className="SongDetails">

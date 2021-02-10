@@ -3,10 +3,27 @@ import {
   TOGGLE_RANDOM,
   TOGGLE_REPEAT,
   TOGGLE_PLAYING,
+  IS_LOGGED,
+  LOG_OUT,
+  MODAL_ACTIVE
 } from './types';
 
 export default function Reducer(state, action) {
   switch (action.type) {
+    case IS_LOGGED:
+      return {
+        ...state,
+        isLogged: true,
+        userName: action.userName
+      }
+    case LOG_OUT:
+      return {
+        ...state, isLogged: false
+      }
+    case MODAL_ACTIVE:
+      return {
+        ...state, modalActive: true
+      }
     case SET_CURRENT_SONG:
       return {
         ...state,

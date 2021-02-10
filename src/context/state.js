@@ -8,20 +8,18 @@ import {
   TOGGLE_RANDOM,
   TOGGLE_REPEAT,
   TOGGLE_PLAYING,
+  IS_LOGGED,
+  LOG_OUT,
+  MODAL_ACTIVE
 } from './types';
 
-function State(props) {
+const State = ({children}) => {
   const initialState = {
-    isAuth: false,
-    userName: null,
-    password: null,
-    email: null,
+    userName: '',
+    modalActive: false,
+    isLogged: false,  
     currentSong: 0,
     playing: false,
-    // playlists: {
-    //   home: songsDB,
-    //   favorites: []
-    // },
     songs: songsDB,
     repeat: false,
     random: false,
@@ -29,6 +27,11 @@ function State(props) {
   }
 
   const [state, dispatch] = useReducer(Reducer, initialState);
+
+  const setIsLogged = () => dispatch({ type: IS_LOGGED, userName: state.userName })
+  const logOut = () => dispatch({ type: LOG_OUT })
+
+  const setModalActive = () => dispatch({ type: MODAL_ACTIVE })
 
   // Set playing state
   const togglePlaying = () => dispatch({ type: TOGGLE_PLAYING, data: state.playing ? false : true })
@@ -76,12 +79,18 @@ function State(props) {
 
   return <Context.Provider
     value={{
+      modalActive: state.modalActive,
+      isLogged: state.isLogged,
+      userName: state.userName,
       currentSong: state.currentSong,
       songs: state.songs,
       repeat: state.repeat,
       random: state.random,
       playing: state.playing,
       audio: state.audio,
+      setModalActive,
+      setIsLogged,
+      logOut,
       nextSong,
       prevSong,
       SetCurrent,
@@ -91,7 +100,7 @@ function State(props) {
       handleEnd
     }}>
 
-    {props.children}
+    {children}
 
   </Context.Provider>
 }

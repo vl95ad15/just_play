@@ -3,13 +3,12 @@
     display: none;
   }
 
-  #root {
-    display: flex;
-    align-items: center;
+  footer {
+    position: relative;
   }
 
   .Player {
-      padding: 0;
+    height: 100vh;
     }
 
   .Player, .PlayerDetails, .PlayerControls {
@@ -18,14 +17,22 @@
     justify-content: center;
   }
 
+  .PlayerButtons {
+    font-size: xx-large;
+    margin-bottom: 20px;
+  }
+
   .PlayerDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20%;
   }
 
   .DetailsImg {
     width: 100%;
     height: 100%;
-    margin-bottom: 50%;
+
   }
 
   .DetailsImg > img {
@@ -37,10 +44,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20%;
     margin-bottom: 20%;
     font-size: larger;
   }
+  
   .ProgressBar {
-    width: 225px;
+    width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .ProgressBarWrapper {
+    margin-bottom: 20px;
   }
 }

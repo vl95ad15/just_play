@@ -11,7 +11,7 @@ const Modal = ({ active, setActive, children }) => {
         <div className="ModalCloseBtn" onClick={() => setActive(false)}>
           <i className="fa fa-times"></i>
         </div>
-        <div className={active ? "ModalContent Active" : "Modal"} onClick={(e) => e.stopPropagation()}>
+        <div className={active ? "ModalContent Active" : "ModalContent"} onClick={(e) => e.stopPropagation()}>
           {children}
         </div>
       </div>

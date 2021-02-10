@@ -1,4 +1,4 @@
-.SignUpBtn {
+.LogOutBtn, .SignUpBtn {
   padding: 7px;
   margin: 0 10px;
   border-radius: 5px;
@@ -7,7 +7,7 @@
   font-size: 15px;
 }
 
-.SignUpBtn:hover {
+.LogOutBtn:hover, .SignUpBtn:hover {
   background-color: #00f8e0;
   transition-duration: 0.5s;
 }

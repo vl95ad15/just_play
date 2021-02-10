@@ -10,14 +10,15 @@ import {
   TOGGLE_PLAYING,
   IS_LOGGED,
   LOG_OUT,
-  MODAL_ACTIVE
+  ADD_FAVORITE,
+  REMOVE_FAVORITE
 } from './types';
 
 const State = ({children}) => {
   const initialState = {
-    userName: '',
+    userName: "",
     modalActive: false,
-    isLogged: false,  
+    isLogged: false,   /// !!!
     currentSong: 0,
     playing: false,
     songs: songsDB,
@@ -28,10 +29,9 @@ const State = ({children}) => {
 
   const [state, dispatch] = useReducer(Reducer, initialState);
 
-  const setIsLogged = () => dispatch({ type: IS_LOGGED, userName: state.userName })
+  const setIsLogged = (userName) => dispatch({ type: IS_LOGGED, payload: { userName } })
   const logOut = () => dispatch({ type: LOG_OUT })
 
-  const setModalActive = () => dispatch({ type: MODAL_ACTIVE })
 
   // Set playing state
   const togglePlaying = () => dispatch({ type: TOGGLE_PLAYING, data: state.playing ? false : true })
@@ -88,7 +88,6 @@ const State = ({children}) => {
       random: state.random,
       playing: state.playing,
       audio: state.audio,
-      setModalActive,
       setIsLogged,
       logOut,
       nextSong,
